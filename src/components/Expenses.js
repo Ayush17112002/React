@@ -3,6 +3,7 @@ import Card from "../UI/Card";
 import ExpenseFilter from "./ExpenseFilter/ExpenseFilter";
 import "./ExpenseFilter/ExpenseFilter.css";
 import ExpenseItem from "./ExpenseItem";
+import ExpensesChart from "./ExpensesChart";
 import ExpensesList from "./ExpensesList";
 import "./ExpensesList.css";
 function Expenses(props) {
@@ -17,6 +18,7 @@ function Expenses(props) {
   return (
     <Card className="expenses">
       <ExpenseFilter onDropdownSelect={onDropdownSelectHandler} />
+      <ExpensesChart items={filteredExpenses} />
       <ExpensesList items={filteredExpenses} />
     </Card>
   );

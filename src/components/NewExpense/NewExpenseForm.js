@@ -26,7 +26,8 @@ export default function NewExpenseForm(props) {
     console.log(title, amount, date);
   }
   function amountHandler(e) {
-    setAmount(e.target.value);
+    setAmount(parseInt(e.target.value));
+    console.log(typeof e.target.value);
   }
   function dateHandler(e) {
     setDate(e.target.value);
